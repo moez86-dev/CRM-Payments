@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9ed2c4;
+    direction: rtl; /* تحديد الاتجاه من اليمين لليسار */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* يجعل المحتوى الرئيسي يأخذ معظم مساحة الشاشة */
+    width: 100%;
+    max-width: 100%; /* التأكد من أن الحاوية تمتد على كامل الصفحة */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap; /* منع النص من التغيير إلى عدة أسطر */
+    padding: 10px;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.btn {
+    margin: 5px;
+    min-width: 150px; /* عرض الأزرار بشكل متناسق */
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* تحسينات على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .table {
+        font-size: 0.9em;
+    }
+    
+    .btn {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        min-width: 100%; /* عرض الأزرار بالكامل على الشاشات الصغيرة */
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* تحسينات على الشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 1.75em;
+    }
+    
+    .table {
+        font-size: 1em;
+    }
+    
+    .btn {
+        font-size: 1em;
+    }
+}
